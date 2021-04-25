@@ -8,6 +8,7 @@ public class NoteObject : MonoBehaviour
 
     public KeyCode keyMap;
 
+    public GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class NoteObject : MonoBehaviour
             if(canBePressed)
             {
                 gameObject.SetActive(false);
+                Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
             }
         }
     }
