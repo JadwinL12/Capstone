@@ -34,10 +34,10 @@ public class NoteObject : MonoBehaviour
                 }
                 else
                 {
-                    foreach (var t in _scoreTracker.multiplierThresholds)
+                    foreach (var multiplierElement in _scoreTracker.multiplierThresholds)
                     {
-                        if (_scoreTracker.currentMultiplier >= t) continue;
-                        _scoreTracker.currentMultiplier = t;
+                        if (_scoreTracker.currentMultiplier >= multiplierElement) continue;
+                        _scoreTracker.currentMultiplier = multiplierElement;
                         break;
                     }
                 }

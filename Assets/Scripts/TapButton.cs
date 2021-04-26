@@ -10,6 +10,9 @@ public class TapButton : MonoBehaviour
 
     public KeyCode keyMap;
 
+    public AudioSource audioSource;
+    public AudioClip clip;
+
     void Start ()
     {
         mR = GetComponent<MeshRenderer>();
@@ -20,13 +23,21 @@ public class TapButton : MonoBehaviour
         if(Input.GetKeyDown(keyMap))
         {
             mR.material = colorTapped;
-            transform.position = new Vector3(transform.position.x, tapped, transform.position.z);
+            var transform1 = transform;
+            var position = transform1.position;
+            position = new Vector3(position.x, tapped, position.z);
+            transform1.position = position;
+            audioSource.PlayOneShot(clip);
+            Debug.Log("I PRESSED");
         }
 
         if(Input.GetKeyUp(keyMap))
         {
             mR.material = colorNotTapped;
-            transform.position = new Vector3(transform.position.x, unTapped, transform.position.z);
+            var transform1 = transform;
+            var position = transform1.position;
+            position = new Vector3(position.x, unTapped, position.z);
+            transform1.position = position;
         }
     }
 
