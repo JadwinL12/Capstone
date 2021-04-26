@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
 
     public void NoteMiss()
     {
-        Debug.Log("Missed Note");
         currentHealth -= 10;
         healthBar.setHealth(currentHealth);
     }
