@@ -24,6 +24,8 @@ public class NoteObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+
+                GameManager.instance.NoteHit();
             }
         }
     }
@@ -41,6 +43,8 @@ public class NoteObject : MonoBehaviour
         if (other.tag == "Button")
         {
             canBePressed = false;
+
+            GameManager.instance.NoteMiss();
         }
     }
 }
