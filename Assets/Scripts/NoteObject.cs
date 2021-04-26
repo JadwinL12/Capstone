@@ -28,7 +28,20 @@ public class NoteObject : MonoBehaviour
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
                 _scoreTracker = FindObjectOfType<ScoreTracker>();
                 _scoreTracker.ScoreHit(_scoreTracker.currentMultiplier);
-                _scoreTracker.currentMultiplier += 1;
+                if (_scoreTracker.currentMultiplier < 2)
+                {
+                    _scoreTracker.currentMultiplier += 1;
+                }
+                else
+                {
+                    foreach (var t in _scoreTracker.multiplierThresholds)
+                    {
+                        if (_scoreTracker.currentMultiplier >= t) continue;
+                        _scoreTracker.currentMultiplier = t;
+                        break;
+                    }
+                }
+                //Debug.Log(_scoreTracker.currentMultiplier);
             }
         }
     }

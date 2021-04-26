@@ -9,6 +9,7 @@ public class ScoreTracker : MonoBehaviour
     private int _score;
     private Text _scoreText;
     public int currentMultiplier = 1;
+    public int[] multiplierThresholds;
     
     // Start is called before the first frame update
     private void Start()
