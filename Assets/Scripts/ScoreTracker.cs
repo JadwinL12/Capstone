@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour
 {
-    [SerializeField] int scorePerHit = 123456;
-    int score;
-    Text scoreText;
+    private const int ScorePerHit = 100;
+    private int _score;
+    private Text _scoreText;
+    public int currentMultiplier = 1;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        scoreText = GetComponent<Text>();
-        scoreText.text = "Score: " + score.ToString();
+        _scoreText = GetComponent<Text>();
+        _scoreText.text = "Score: " + _score.ToString();
     }
 
-    void ScoreHit()
+    public void ScoreHit(int comboNumber)
     {
-        score += scorePerHit;
-        scoreText.text = "Score: " + score.ToString();
+        _score += (comboNumber * ScorePerHit);
+        _scoreText = GetComponent<Text>();
+        _scoreText.text = "Score: " + _score.ToString();
     }
 }
