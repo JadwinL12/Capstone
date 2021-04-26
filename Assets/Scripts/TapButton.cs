@@ -8,16 +8,26 @@ public class TapButton : MonoBehaviour
     public float tapped = 0.07f;
     public float unTapped = -0.07f;
 
-    void OnMouseDown()
+    public KeyCode keyMap;
+
+    void Start ()
     {
-        mR.material = colorTapped;
-        transform.position = new Vector3(transform.position.x, tapped, transform.position.z);
+        mR = GetComponent<MeshRenderer>();
     }
 
-    private void OnMouseUp()
+    void Update ()
     {
-        mR.material = colorNotTapped;
-        transform.position = new Vector3(transform.position.x, unTapped, transform.position.z);
+        if(Input.GetKeyDown(keyMap))
+        {
+            mR.material = colorTapped;
+            transform.position = new Vector3(transform.position.x, tapped, transform.position.z);
+        }
+
+        if(Input.GetKeyUp(keyMap))
+        {
+            mR.material = colorNotTapped;
+            transform.position = new Vector3(transform.position.x, unTapped, transform.position.z);
+        }
     }
 
 }
