@@ -424,6 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676097657}
   - component: {fileID: 676097658}
+  - component: {fileID: 676097659}
   m_Layer: 0
   m_Name: NoteHolder
   m_TagString: Untagged
@@ -466,6 +467,21 @@ MonoBehaviour:
   hasStarted: 0
   maxHealth: 100
   currentHealth: 0
+--- !u!114 &676097659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676097656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0696c0fb5a012e14da2faee3725c129d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filePath: 
+  myPrefab: {fileID: 725477709}
+  newobj: {fileID: 0}
 --- !u!1 &692981505
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,8 +661,18 @@ PrefabInstance:
       objectReference: {fileID: 1761175201}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e17c040baac49bfbab34e436244b01, type: 3}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
       propertyPath: keyMap
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
+      propertyPath: tapped
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
@@ -670,6 +696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
+      propertyPath: unTapped
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
       propertyPath: unTapped.x
       value: -1.88
       objectReference: {fileID: 0}
@@ -683,6 +714,11 @@ PrefabInstance:
       propertyPath: unTapped.z
       value: -10.23
       objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1013095151}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
       propertyPath: colorTapped
@@ -961,6 +997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1013095150}
+  - component: {fileID: 1013095151}
   m_Layer: 0
   m_Name: ButtonHolder
   m_TagString: Untagged
@@ -986,6 +1023,102 @@ Transform:
   m_Father: {fileID: 954175782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1013095151
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013095149}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.752
+  m_Pitch: 1.88
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1030771869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,6 +1173,11 @@ PrefabInstance:
       objectReference: {fileID: 1030771871}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e17c040baac49bfbab34e436244b01, type: 3}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
       propertyPath: keyMap
       value: 106
       objectReference: {fileID: 0}
@@ -1078,6 +1216,11 @@ PrefabInstance:
       propertyPath: unTapped.z
       value: -10.23
       objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1013095151}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
       propertyPath: colorTapped
@@ -1353,7 +1496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c058fcef1deff6047b6e9e16243c55cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePerHit: 123456
+  currentMultiplier: 1
+  multiplierThresholds: 040000000800000010000000
 --- !u!1 &1277950990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1654,11 @@ PrefabInstance:
       objectReference: {fileID: 1298341655}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e17c040baac49bfbab34e436244b01, type: 3}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
       propertyPath: keyMap
       value: 107
       objectReference: {fileID: 0}
@@ -1548,6 +1697,11 @@ PrefabInstance:
       propertyPath: unTapped.z
       value: -10.23
       objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1013095151}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
       propertyPath: colorTapped
@@ -2050,7 +2204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c058fcef1deff6047b6e9e16243c55cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePerHit: 123456
+  currentMultiplier: 1
+  multiplierThresholds: 
 --- !u!1 &1968216106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6738580688345294270, guid: 6b8f68171fe7c4d79828906d7aa4d931,
@@ -2127,6 +2282,11 @@ PrefabInstance:
       objectReference: {fileID: 2000028522}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 07e17c040baac49bfbab34e436244b01, type: 3}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
       propertyPath: keyMap
       value: 102
       objectReference: {fileID: 0}
@@ -2165,6 +2325,11 @@ PrefabInstance:
       propertyPath: unTapped.z
       value: -10.23
       objectReference: {fileID: 0}
+    - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1013095151}
     - target: {fileID: 7099150577580520448, guid: 6b8f68171fe7c4d79828906d7aa4d931,
         type: 3}
       propertyPath: colorTapped
