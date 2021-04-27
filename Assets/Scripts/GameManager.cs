@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
 
                 theMusic.Play();
             }
+            /* if(currentHealth == 0)
+            {
+                Debug.Log("FAILED!");
+            } */
         }
     }
 
