@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1EE98971-DB57-CCE3-EB35-7D60258BAC4D}</ProjectGuid>
+    <ProjectGuid>{0EB12C47-39EB-F228-38EF-D8CCBCAE3B9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,10 +61,13 @@
     <Compile Include="Assets\Scripts\ToggleButton.cs" />
     <Compile Include="Assets\Scripts\TapButton.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Combo.cs" />
     <Compile Include="Assets\Scripts\EffectObject.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\NoteObject.cs" />
+    <Compile Include="Assets\Scripts\ResultsMenu.cs" />
     <Compile Include="Assets\Scripts\NoteScroll.cs" />
   </ItemGroup>
   <ItemGroup>
