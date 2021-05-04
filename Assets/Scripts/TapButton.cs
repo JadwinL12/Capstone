@@ -28,7 +28,6 @@ public class TapButton : MonoBehaviour
             position = new Vector3(position.x, tapped, position.z);
             transform1.position = position;
             audioSource.PlayOneShot(clip);
-            Debug.Log("I PRESSED");
         }
 
         if(Input.GetKeyUp(keyMap))
