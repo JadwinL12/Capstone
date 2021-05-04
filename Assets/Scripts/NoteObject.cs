@@ -10,15 +10,16 @@ public class NoteObject : MonoBehaviour
 
     public GameObject hitEffect;
 
-    private ScoreTracker _scoreTracker;
+    private Vector3 screenBounds;
+
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
-        
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
         if(Input.GetKeyDown(keyMap))
         {
@@ -26,29 +27,15 @@ public class NoteObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
-                _scoreTracker = FindObjectOfType<ScoreTracker>();
-                _scoreTracker.ScoreHit(_scoreTracker.currentMultiplier);
-                if (_scoreTracker.currentMultiplier < 2)
-                {
-                    _scoreTracker.currentMultiplier += 1;
-                }
-                else
-                {
-                    foreach (var multiplierElement in _scoreTracker.multiplierThresholds)
-                    {
-                        if (_scoreTracker.currentMultiplier >= multiplierElement) continue;
-                        _scoreTracker.currentMultiplier = multiplierElement;
-                        break;
-                    }
-                }
-                //Debug.Log(_scoreTracker.currentMultiplier);
+
+                GameManager.instance.NoteHit();
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Button"))
+        if(other.tag == "Button")
         {
             canBePressed = true;
         }
@@ -56,11 +43,11 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Button"))
+        if (other.tag == "Button")
         {
             canBePressed = false;
-            _scoreTracker = FindObjectOfType<ScoreTracker>();
-            _scoreTracker.currentMultiplier = 1;
+
+            GameManager.instance.NoteMiss();
         }
     }
 }
