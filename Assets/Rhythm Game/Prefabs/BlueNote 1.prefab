@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4578525205978287089}
   - component: {fileID: 7534861251709404286}
   m_Layer: 0
-  m_Name: BlueNote
+  m_Name: BlueNote 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,4 +128,8 @@ MonoBehaviour:
   canBePressed: 0
   keyMap: 106
   hitEffect: {fileID: 6959208976047649324, guid: 132cf2b49fac9124f816363136f49c4a,
+    type: 3}
+  goodEffect: {fileID: 1919502069444157547, guid: a4a5a64fcd8c51b4881f52fa82137b16,
+    type: 3}
+  perfectEffect: {fileID: 4464870422367296103, guid: 32d9714ffe1c4b446945310137b38e21,
     type: 3}

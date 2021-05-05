@@ -10,6 +10,10 @@ public class NoteObject : MonoBehaviour
 
     public GameObject hitEffect;
 
+    public GameObject goodEffect;
+
+    public GameObject perfectEffect;
+
     private Vector3 screenBounds;
 
     // Start is called before the first frame update
@@ -27,8 +31,17 @@ public class NoteObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
-
-                GameManager.instance.NoteHit();
+                if (transform.position.z > 0.1 || transform.position.z < -0.1)
+                {
+                    GameManager.instance.NoteGoodHit();
+                    Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+                    Debug.Log("Good Hit");
+                } else
+                {
+                    GameManager.instance.NotePerfectHit();
+                    Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+                    Debug.Log("Perfect Hit");
+                }
             }
         }
     }
@@ -48,6 +61,7 @@ public class NoteObject : MonoBehaviour
             canBePressed = false;
 
             GameManager.instance.NoteMiss();
+            Debug.Log("Miss");
         }
     }
 }

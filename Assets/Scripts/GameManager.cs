@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NoteHit()
+    public void NotePerfectHit()
     {
         Combo comboText = comboBar.GetComponent<Combo>();
         Score scoreText = scoreBar.GetComponent<Score>();
@@ -80,7 +80,21 @@ public class GameManager : MonoBehaviour
         comboText.hitCount += 1;
         scoreText.totalHit += 1;
         healthValue.addHealth();
-        scoreText.addScore();
+        scoreText.addPerfectScore();
+    }
+
+    public void NoteGoodHit()
+    {
+        Combo comboText = comboBar.GetComponent<Combo>();
+        Score scoreText = scoreBar.GetComponent<Score>();
+        HealthBar healthValue = healthBar.GetComponent<HealthBar>();
+        ResultsMenu results = resultsMenuUI.GetComponent<ResultsMenu>();
+
+        results.goodHits += 1;
+        comboText.hitCount += 1;
+        scoreText.totalHit += 1;
+        healthValue.addHealth();
+        scoreText.addGoodScore();
     }
 
     public void NoteMiss()

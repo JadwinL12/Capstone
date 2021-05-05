@@ -129,3 +129,7 @@ MonoBehaviour:
   keyMap: 102
   hitEffect: {fileID: 8909740448649511320, guid: d5bed0e8085118549a61fa762dfb3e0a,
     type: 3}
+  goodEffect: {fileID: 1919502069444157547, guid: a4a5a64fcd8c51b4881f52fa82137b16,
+    type: 3}
+  perfectEffect: {fileID: 4464870422367296103, guid: 32d9714ffe1c4b446945310137b38e21,
+    type: 3}

@@ -2258,7 +2258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1160326422}
   comboBar: {fileID: 692981505}
-  hitScore: 5
+  perfectHitScore: 10
+  goodHitScore: 5
   totalScore: 0
   totalHit: 0
 --- !u!1 &1208243289
@@ -3523,13 +3524,13 @@ MonoBehaviour:
   beatTempo: 135
   offset: 9500
   hasStarted: 0
-  greenPrefab: {fileID: 7479369906097228388, guid: 49b9e4cdc0f43d347884bd1a2413be5e,
+  greenPrefab: {fileID: 7479369906097228388, guid: 175292cc59071cc428885b028bac7c28,
     type: 3}
   redPrefab: {fileID: 2236549178059882049, guid: 17a53712ab914774f85460d00047a412,
     type: 3}
-  bluePrefab: {fileID: 7488679912833807665, guid: 675e18d786b9c5b488e22512de6dac26,
+  bluePrefab: {fileID: 7488679912833807665, guid: f6d3a2e6910c1ee42ab274fa028e5493,
     type: 3}
-  orangePrefab: {fileID: 6943962550686905126, guid: 88189f45426ca8f45b363c392dfcd119,
+  orangePrefab: {fileID: 6943962550686905126, guid: ad7136a45d41143419bed9ec246865ee,
     type: 3}
   textJSON: {fileID: 4900000, guid: 47bc4999b0a11644f83c8e5d891dd781, type: 3}
   myTrack:
