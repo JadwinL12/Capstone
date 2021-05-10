@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour
     public GameObject comboBarUI;
     public GameObject scoreBarUI;
     public GameObject gameBoardUI;
+    
+    public GameObject HotStreakUIObject;
+    public int[] HotStreakThresholds;
 
     public static GameManager instance;
 
@@ -67,6 +71,15 @@ public class GameManager : MonoBehaviour
 
             resultsMenuUI.SetActive(true);
         }
+        
+        // HotStreak text popup
+        HotStreak hotStreak = HotStreakUIObject.GetComponent<HotStreak>();
+        Combo comboText = comboBar.GetComponent<Combo>();
+
+        if (HotStreakThresholds.All(multiplierElement => comboText.hitCount != multiplierElement)) return;
+        HotStreakUIObject.SetActive(true);
+        hotStreak.ShowHotStreak();
+        StartCoroutine(nameof(WaitForSec));
     }
 
     public void NoteHit()
@@ -81,6 +94,12 @@ public class GameManager : MonoBehaviour
         scoreText.totalHit += 1;
         healthValue.addHealth();
         scoreText.addScore();
+    }
+
+    private IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(3);
+        HotStreakUIObject.SetActive(false);
     }
 
     public void NoteMiss()
