@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public GameObject scoreBarUI;
     public GameObject gameBoardUI;
 
+    public GameObject optionsMenuUI;
+    public OptionsMenu options;
+
     public static GameManager instance;
 
     enum Screen
@@ -45,8 +48,27 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!startPlaying)
+        // Wait for scroll speed selection
+        if (!startPlaying && !options.isSelected)
         {
+            healthBarUI.SetActive(false);
+            comboBarUI.SetActive(false);
+            scoreBarUI.SetActive(false);
+            gameBoardUI.SetActive(false);
+
+            optionsMenuUI.SetActive(true);
+        }
+
+        // Wait for key down to start song
+        if (!startPlaying && options.isSelected)
+        {
+            healthBarUI.SetActive(true);
+            comboBarUI.SetActive(true);
+            scoreBarUI.SetActive(true);
+            gameBoardUI.SetActive(true);
+
+            optionsMenuUI.SetActive(false);
+
             if (Input.anyKeyDown)
             {
                 startPlaying = true;
@@ -55,6 +77,7 @@ public class GameManager : MonoBehaviour
                 theMusic.Play();
             }
         }
+
         HealthBar healthValue = healthBar.GetComponent<HealthBar>();
         currentHealth = healthValue.getHealth();
         // Ensure song is at the end rather than paused
