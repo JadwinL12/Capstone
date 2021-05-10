@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -20,6 +21,7 @@ public class Preloader : MonoBehaviour
         Debug.Log(_loadTime);
         initialText.canvasRenderer.SetAlpha(1);
         initialText.CrossFadeAlpha((float) 0.01, _loadTime, false);
+        SceneManager.LoadScene("Menu");
     }
 
     // Update is called once per frame
