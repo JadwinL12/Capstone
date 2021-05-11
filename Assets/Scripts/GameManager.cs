@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,8 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject scoreBarUI;
     public GameObject gameBoardUI;
     
-    public GameObject HotStreakUIObject;
-    public int[] HotStreakThresholds;
+    [FormerlySerializedAs("HotStreakUIObject")] public GameObject hotStreakUIObject;
+    [FormerlySerializedAs("HotStreakThresholds")] public int[] hotStreakThresholds;
 
     public static GameManager instance;
 
@@ -71,15 +72,6 @@ public class GameManager : MonoBehaviour
 
             resultsMenuUI.SetActive(true);
         }
-        
-        // HotStreak text popup
-        HotStreak hotStreak = HotStreakUIObject.GetComponent<HotStreak>();
-        Combo comboText = comboBar.GetComponent<Combo>();
-
-        if (HotStreakThresholds.All(multiplierElement => comboText.hitCount != multiplierElement)) return;
-        HotStreakUIObject.SetActive(true);
-        hotStreak.ShowHotStreak();
-        StartCoroutine(nameof(WaitForSec));
     }
 
     public void NoteHit()
@@ -94,12 +86,21 @@ public class GameManager : MonoBehaviour
         scoreText.totalHit += 1;
         healthValue.addHealth();
         scoreText.addScore();
+        
+        // HotStreak text popup
+        HotStreak hotStreak = hotStreakUIObject.GetComponent<HotStreak>();
+        //Combo comboText = comboBar.GetComponent<Combo>();
+
+        if (hotStreakThresholds.All(multiplierElement => comboText.hitCount != multiplierElement)) return;
+        hotStreakUIObject.SetActive(true);
+        hotStreak.ShowHotStreak();
+        StartCoroutine(nameof(WaitForSec));
     }
 
     private IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(3);
-        HotStreakUIObject.SetActive(false);
+        hotStreakUIObject.SetActive(false);
     }
 
     public void NoteMiss()
