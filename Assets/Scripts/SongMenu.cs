@@ -17,7 +17,7 @@ public class SongMenu : MonoBehaviour
 
     public void Track3()
     {
-        Debug.Log("GO TO TRACK 3!");
+        SceneManager.LoadScene("Game3");
     }
 
     public void Back()
