@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TapButton : MonoBehaviour
+public class TapButton : MonoBehaviour, IClick
 {
     public MeshRenderer mR;
     public Material colorNotTapped;
@@ -22,22 +22,37 @@ public class TapButton : MonoBehaviour
     {
         if(Input.GetKeyDown(keyMap))
         {
-            mR.material = colorTapped;
-            var transform1 = transform;
-            var position = transform1.position;
-            position = new Vector3(position.x, tapped, position.z);
-            transform1.position = position;
-            audioSource.PlayOneShot(clip);
+            ButtonTapped();
         }
 
         if(Input.GetKeyUp(keyMap))
         {
-            mR.material = colorNotTapped;
-            var transform1 = transform;
-            var position = transform1.position;
-            position = new Vector3(position.x, unTapped, position.z);
-            transform1.position = position;
+            ButtonUnTapped();
         }
     }
 
+    public void ButtonTapped()
+    {
+        mR.material = colorTapped;
+        var transform1 = transform;
+        var position = transform1.position;
+        position = new Vector3(position.x, tapped, position.z);
+        transform1.position = position;
+        audioSource.PlayOneShot(clip);
+    }
+
+    public void ButtonUnTapped()
+    {
+        mR.material = colorNotTapped;
+        var transform1 = transform;
+        var position = transform1.position;
+        position = new Vector3(position.x, unTapped, position.z);
+        transform1.position = position;
+    }
+
+    public void ONClickAction()
+    {
+        ButtonTapped();
+        ButtonUnTapped();
+    }
 }
