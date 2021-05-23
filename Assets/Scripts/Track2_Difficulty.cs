@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Track2_Difficulty : MonoBehaviour
 {
@@ -15,6 +16,6 @@ public class Track2_Difficulty : MonoBehaviour
 
     public void selectHard()
     {
-        SceneManager.LoadScene("Track2_Normal");
+        SceneManager.LoadScene("Track2_Hard");
     }
 }

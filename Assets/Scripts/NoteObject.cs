@@ -14,6 +14,8 @@ public class NoteObject : MonoBehaviour
 
     public GameObject perfectEffect;
 
+    public GameObject missEffect;
+
     private Vector3 screenBounds;
 
     // Start is called before the first frame update
@@ -61,7 +63,7 @@ public class NoteObject : MonoBehaviour
             canBePressed = false;
 
             GameManager.instance.NoteMiss();
-            Debug.Log("Miss");
+            Instantiate(missEffect, transform.position, missEffect.transform.rotation);
         }
     }
 
