@@ -3260,7 +3260,7 @@ MonoBehaviour:
   scoreBarUI: {fileID: 1160326420}
   gameBoardUI: {fileID: 954175778}
   hotStreakUIObject: {fileID: 1963705091}
-  hotStreakThresholds: 
+  hotStreakThresholds: 030000003200000046000000
 --- !u!4 &1431232064
 Transform:
   m_ObjectHideFlags: 0

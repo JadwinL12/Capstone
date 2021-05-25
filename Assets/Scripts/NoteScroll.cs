@@ -46,6 +46,7 @@ public class NoteScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         myTrack = JsonUtility.FromJson<Track>(textJSON.text);
         Debug.Log(myTrack.name);
         Debug.Log(myTrack.BPM);
