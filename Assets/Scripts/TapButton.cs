@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TapButton : MonoBehaviour
+public class TapButton : MonoBehaviour, IClick
 {
     public MeshRenderer mR;
     public Material colorNotTapped;
@@ -18,29 +18,20 @@ public class TapButton : MonoBehaviour
         mR = GetComponent<MeshRenderer>();
     }
 
-    //void Update ()
-    //{
-    //    if(Input.GetKeyDown(keyMap))
-    //    {
-    //        mR.material = colorTapped;
-    //        var transform1 = transform;
-    //        var position = transform1.position;
-    //        position = new Vector3(position.x, tapped, position.z);
-    //        transform1.position = position;
-    //        audioSource.PlayOneShot(clip);
-    //    }
+    void Update ()
+    {
+        if(Input.GetKeyDown(keyMap))
+        {
+            ButtonTapped();
+        }
 
-    //    if(Input.GetKeyUp(keyMap))
-    //    {
-    //        mR.material = colorNotTapped;
-    //        var transform1 = transform;
-    //        var position = transform1.position;
-    //        position = new Vector3(position.x, unTapped, position.z);
-    //        transform1.position = position;
-    //    }
-    //}
+        if(Input.GetKeyUp(keyMap))
+        {
+            ButtonUnTapped();
+        }
+    }
 
-    void OnMouseDown()
+    public void ButtonTapped()
     {
         mR.material = colorTapped;
         var transform1 = transform;
@@ -50,7 +41,7 @@ public class TapButton : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
-    void OnMouseUp()
+    public void ButtonUnTapped()
     {
         mR.material = colorNotTapped;
         var transform1 = transform;
@@ -59,22 +50,9 @@ public class TapButton : MonoBehaviour
         transform1.position = position;
     }
 
-    public void startTap()
+    public void ONClickAction()
     {
-        mR.material = colorTapped;
-        var transform1 = transform;
-        var position = transform1.position;
-        position = new Vector3(position.x, tapped, position.z);
-        transform1.position = position;
-        audioSource.PlayOneShot(clip);
-    }
-
-    public void endTap()
-    {
-        mR.material = colorNotTapped;
-        var transform1 = transform;
-        var position = transform1.position;
-        position = new Vector3(position.x, unTapped, position.z);
-        transform1.position = position;
+        ButtonTapped();
+        ButtonUnTapped();
     }
 }

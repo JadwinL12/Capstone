@@ -33,17 +33,8 @@ public class NoteObject : MonoBehaviour
     //        {
     //            gameObject.SetActive(false);
     //            Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
-    //            if (transform.position.z > 0.1 || transform.position.z < -0.1)
-    //            {
-    //                GameManager.instance.NoteGoodHit();
-    //                Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
-    //                Debug.Log("Good Hit");
-    //            } else
-    //            {
-    //                GameManager.instance.NotePerfectHit();
-    //                Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
-    //                Debug.Log("Perfect Hit");
-    //            }
+
+    //            GameManager.instance.NoteHit();
     //        }
     //    }
     //}

@@ -60,8 +60,6 @@ public class NoteScroll : MonoBehaviour
     {
         /* GameObject a = Instantiate(greenPrefab) as GameObject;
         a.transform.position = new Vector3(0f, 0f, myNotesList.notes[i].num); */
-        Debug.Log("Notes length: ");
-        Debug.Log(myNotesList.notes.Length);
         for (int i = 0; i < myNotesList.notes.Length; i++)
         {
             if (myNotesList.notes[i].block == 0)
