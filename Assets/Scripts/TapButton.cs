@@ -49,6 +49,24 @@ public class TapButton : MonoBehaviour, IClick
         position = new Vector3(position.x, unTapped, position.z);
         transform1.position = position;
     }
+    void OnMouseDown()
+    {
+        mR.material = colorTapped;
+        var transform1 = transform;
+        var position = transform1.position;
+        position = new Vector3(position.x, tapped, position.z);
+        transform1.position = position;
+        audioSource.PlayOneShot(clip);
+    }
+
+    void OnMouseUp()
+    {
+        mR.material = colorNotTapped;
+        var transform1 = transform;
+        var position = transform1.position;
+        position = new Vector3(position.x, unTapped, position.z);
+        transform1.position = position;
+    }
 
     public void ONClickAction()
     {

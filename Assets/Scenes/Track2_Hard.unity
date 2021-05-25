@@ -1286,7 +1286,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 27f16c4ad87929d44b9670825f2a4cc9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2258,7 +2258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1160326422}
   comboBar: {fileID: 692981505}
-  hitScore: 5
+  perfectHitScore: 10
+  goodHitScore: 5
   totalScore: 0
   totalHit: 0
 --- !u!1 &1208243289
