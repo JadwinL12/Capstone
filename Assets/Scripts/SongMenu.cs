@@ -12,7 +12,7 @@ public class SongMenu : MonoBehaviour
 
     public void Track2()
     {
-        SceneManager.LoadScene("Game2");
+        SceneManager.LoadScene("DiffMenu");
     }
 
     public void Track3()

@@ -12,10 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/SongMenu.unity
     guid: faacddd528c342442a4e604b5619b1de
   - enabled: 1
+    path: Assets/Scenes/DiffMenu.unity
+    guid: 208d8ea5c03dc6e40962d02a1544f05f
+  - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: 1a1412a10207b1a4997bd258cb013133
   - enabled: 1
-    path: Assets/Scenes/Game2.unity
+    path: Assets/Scenes/Game2Easy.unity
+    guid: 1fdd45809dca5204a977480f29172039
+  - enabled: 1
+    path: Assets/Scenes/Game2Med.unity
+    guid: d918ef69e2ca4af4fb07af762ad1bf91
+  - enabled: 1
+    path: Assets/Scenes/Game2Hard.unity
     guid: c7d5455db572d754d874f0fdc3bbd1fe
   - enabled: 1
     path: Assets/Scenes/Game3.unity
