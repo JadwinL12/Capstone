@@ -19,4 +19,9 @@ public class Track3_Difficulty : MonoBehaviour
     {
         SceneManager.LoadScene("Track3_Hard");
     }
+
+    public void goBack()
+    {
+        SceneManager.LoadScene("SongSelect");
+    }
 }

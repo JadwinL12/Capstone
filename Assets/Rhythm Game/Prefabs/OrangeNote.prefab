@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6943962550686905127}
   - component: {fileID: 8020504435266458987}
   - component: {fileID: 7801034912960920244}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OrangeNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8, y: 0.5, z: 0.8}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!54 &8020504435266458987
 Rigidbody:
   m_ObjectHideFlags: 0

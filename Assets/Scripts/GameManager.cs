@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
     public GameObject comboBarUI;
     public GameObject scoreBarUI;
     public GameObject gameBoardUI;
-    
+    public GameObject pauseMenuUI;
+    public GameObject tapStartUI;
+
     [FormerlySerializedAs("HotStreakUIObject")] public GameObject hotStreakUIObject;
     [FormerlySerializedAs("HotStreakThresholds")] public int[] hotStreakThresholds;
 
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
             {
                 startPlaying = true;
                 theNS.hasStarted = true;
+                tapStartUI.SetActive(false);
 
                 theMusic.Play();
             }
@@ -69,6 +72,7 @@ public class GameManager : MonoBehaviour
             comboBarUI.SetActive(false);
             scoreBarUI.SetActive(false);
             gameBoardUI.SetActive(false);
+            pauseMenuUI.SetActive(false);
 
             resultsMenuUI.SetActive(true);
         }

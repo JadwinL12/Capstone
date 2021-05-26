@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{27C3EB0C-82F9-E7B0-DF09-511482CE7540}</ProjectGuid>
+    <ProjectGuid>{6B7A248B-3E37-E045-4438-67EF1EEDFFE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\TouchControls.cs" />
+    <Compile Include="Assets\Scripts\Track3_Difficulty.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\NoteObject.cs" />
     <Compile Include="Assets\Scripts\ResultsMenu.cs" />
@@ -68,15 +69,16 @@
     <Compile Include="Assets\Scripts\ToggleButton.cs" />
     <Compile Include="Assets\Scripts\TapButton.cs" />
     <Compile Include="Assets\Scripts\Combo.cs" />
+    <Compile Include="Assets\Scripts\SongSelect.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\EffectObject.cs" />
     <Compile Include="Assets\Scripts\MobileTapClickInterface.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
-    <Compile Include="Assets\Scripts\NoteScroll.cs" />
     <Compile Include="Assets\Scripts\Track2_Difficulty.cs" />
-    <Compile Include="Assets\Scripts\SongSelect.cs" />
-    <Compile Include="Assets\Scripts\Track3_Difficulty.cs" />
+    <Compile Include="Assets\Scripts\NoteScroll.cs" />
+    <Compile Include="Assets\Scripts\OptionsMenu.cs" />
+    <Compile Include="Assets\Scripts\Track1_Difficulty.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
