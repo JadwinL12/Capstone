@@ -24,6 +24,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Track3_Difficulty.unity
     guid: 8e918e23398b7b7409a54e32ab2b7e53
   - enabled: 1
+    path: Assets/Scenes/Track1_Easy.unity
+    guid: b89b865686902cd41aa14c69d396f96c
+  - enabled: 1
+    path: Assets/Scenes/Track1_Hard.unity
+    guid: bb459cbe4323e2b49a57e3f481d7733e
+  - enabled: 1
+    path: Assets/Scenes/Track1_Medium.unity
+    guid: c703919526c5c0c4f890156d4caf8655
+  - enabled: 1
     path: Assets/Scenes/Track2_Easy.unity
     guid: 386e6d9e9bdc99143a34f3f8dabbb8ae
   - enabled: 1

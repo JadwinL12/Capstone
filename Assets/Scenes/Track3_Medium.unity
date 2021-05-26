@@ -3052,7 +3052,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.666
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3945,6 +3945,10 @@ MonoBehaviour:
     type: 3}
   orangePrefab: {fileID: 6943962550686905126, guid: 88189f45426ca8f45b363c392dfcd119,
     type: 3}
+  whitePrefab1: {fileID: 0}
+  whitePrefab2: {fileID: 0}
+  whitePrefab3: {fileID: 0}
+  whitePrefab4: {fileID: 0}
   textJSON: {fileID: 4900000, guid: 76c9544412aa174479850622d9465b74, type: 3}
   myTrack:
     name: 
