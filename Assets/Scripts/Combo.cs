@@ -40,6 +40,23 @@ public class Combo : MonoBehaviour
             highestCombo = comboCount;
         }
 
-        comboText.text = "COMBO: " + comboCount.ToString() + "x";
+        switch (comboCount)
+        {
+            case 1:
+                comboText.text = "COMBO: " + "<color=white>" + comboCount.ToString() + "x" + "</color>";
+                break;
+            case 2:
+                comboText.text = "COMBO: " + "<color=yellow>" + comboCount.ToString() + "x" + "</color>";
+                break;
+            case 3:
+                comboText.text = "COMBO: " + "<color=green>" + comboCount.ToString() + "x" + "</color>";
+                break;
+            case 4:
+                comboText.text = "COMBO: " + "<color=blue>" + comboCount.ToString() + "x" + "</color>";
+                break;
+            default:
+                comboText.text = "COMBO: " + "<color=white>" + comboCount.ToString() + "x" + "</color>";
+                break;
+        }
     }
 }
