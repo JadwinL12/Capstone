@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7479369906097228389}
   - component: {fileID: 3751167434065946006}
   - component: {fileID: 9179973053416893624}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GreenNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!54 &3751167434065946006
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -128,4 +128,10 @@ MonoBehaviour:
   canBePressed: 0
   keyMap: 100
   hitEffect: {fileID: 3675135157236927735, guid: 2fe6bbe086bdc16448ae6235ce20403b,
+    type: 3}
+  goodEffect: {fileID: 1919502069444157547, guid: d3863056103c9f74993c9e32a0a2d044,
+    type: 3}
+  perfectEffect: {fileID: 4464870422367296103, guid: 7bd38332180145e40ac783c05c0d4819,
+    type: 3}
+  missEffect: {fileID: 4464870422367296103, guid: 7eef96780c9432845ade319f7c442633,
     type: 3}

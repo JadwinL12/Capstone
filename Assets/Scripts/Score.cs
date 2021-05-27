@@ -9,7 +9,8 @@ public class Score : MonoBehaviour
 
     public GameObject comboBar;
 
-    public int hitScore = 5;
+    public int perfectHitScore = 10;
+    public int goodHitScore = 5;
 
     public int totalScore;
 
@@ -28,9 +29,15 @@ public class Score : MonoBehaviour
         scoreText.text = "SCORE: " + totalScore.ToString();
     }
 
-    public void addScore()
+    public void addPerfectScore()
     {
         Combo comboText = comboBar.GetComponent<Combo>();
-        totalScore += (hitScore * comboText.comboCount);
+        totalScore += (perfectHitScore * comboText.comboCount);
+    }
+
+    public void addGoodScore()
+    {
+        Combo comboText = comboBar.GetComponent<Combo>();
+        totalScore += (goodHitScore * comboText.comboCount);
     }
 }

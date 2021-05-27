@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
         GameManager.instance.theMusic.Play();
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
