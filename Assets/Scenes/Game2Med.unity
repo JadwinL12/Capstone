@@ -5282,9 +5282,6 @@ MonoBehaviour:
   whitePrefab2: {fileID: 0}
   whitePrefab3: {fileID: 0}
   whitePrefab4: {fileID: 0}
-  options: {fileID: 1668751755}
-  speedSetting: 1
-  spawnFlag: 0
   textJSON: {fileID: 4900000, guid: 2ef4fa967f5ae0f43a395181fc857d94, type: 3}
   myTrack:
     name: 
@@ -5622,7 +5619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2013966098}
   comboBar: {fileID: 70722768}
-  hitScore: 5
+  perfectHitScore: 10
+  goodHitScore: 5
   totalScore: 0
   totalHit: 0
 --- !u!114 &2013966098
@@ -5823,8 +5821,10 @@ MonoBehaviour:
   comboBarUI: {fileID: 70722768}
   scoreBarUI: {fileID: 2013966096}
   gameBoardUI: {fileID: 1414728343}
-  optionsMenuUI: {fileID: 1668751754}
-  options: {fileID: 1668751755}
+  pauseMenuUI: {fileID: 0}
+  tapStartUI: {fileID: 0}
+  hotStreakUIObject: {fileID: 0}
+  hotStreakThresholds: 
 --- !u!4 &2081582331
 Transform:
   m_ObjectHideFlags: 0
