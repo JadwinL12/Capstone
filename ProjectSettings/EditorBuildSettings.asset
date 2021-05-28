@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6b6d33b5af41461458b0f2d947e67ad7
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 1a1412a10207b1a4997bd258cb013133
-  - enabled: 1
     path: Assets/Scenes/SongSelect.unity
     guid: d8740ab0ac752084db0219f5084b8ca4
   - enabled: 1
@@ -27,27 +24,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Track1_Easy.unity
     guid: b89b865686902cd41aa14c69d396f96c
   - enabled: 1
-    path: Assets/Scenes/Track1_Hard.unity
-    guid: bb459cbe4323e2b49a57e3f481d7733e
-  - enabled: 1
     path: Assets/Scenes/Track1_Normal.unity
     guid: c703919526c5c0c4f890156d4caf8655
+  - enabled: 1
+    path: Assets/Scenes/Track1_Hard.unity
+    guid: bb459cbe4323e2b49a57e3f481d7733e
   - enabled: 1
     path: Assets/Scenes/Track2_Easy.unity
     guid: 386e6d9e9bdc99143a34f3f8dabbb8ae
   - enabled: 1
-    path: Assets/Scenes/Track2_Hard.unity
-    guid: 075d57eba39dbcf478924ffbe051a991
-  - enabled: 1
     path: Assets/Scenes/Track2_Normal.unity
     guid: 6ef8892b0efc72d469d51157c6a36b98
+  - enabled: 1
+    path: Assets/Scenes/Track2_Hard.unity
+    guid: 075d57eba39dbcf478924ffbe051a991
   - enabled: 1
     path: Assets/Scenes/Track3_Easy.unity
     guid: fff5c2d76df3629418636b084b2a8208
   - enabled: 1
-    path: Assets/Scenes/Track3_Hard.unity
-    guid: 8a59eb6986c63e044b8e5a8be5bafebb
-  - enabled: 1
     path: Assets/Scenes/Track3_Normal.unity
     guid: a7fd7efb9fa26154cb78b8f691501f92
+  - enabled: 1
+    path: Assets/Scenes/Track3_Hard.unity
+    guid: 8a59eb6986c63e044b8e5a8be5bafebb
   m_configObjects: {}
