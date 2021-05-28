@@ -3652,6 +3652,14 @@ MonoBehaviour:
     type: 3}
   orangePrefab: {fileID: 6943962550686905126, guid: 88189f45426ca8f45b363c392dfcd119,
     type: 3}
+  whitePrefab1: {fileID: 7479369906097228388, guid: 625c610c019c4364383f2132076b7cac,
+    type: 3}
+  whitePrefab2: {fileID: 2236549178059882049, guid: ac5df97d259a08449bb8eaaa71a0e8cf,
+    type: 3}
+  whitePrefab3: {fileID: 7488679912833807665, guid: ed169fe4277fc3f40884ade5940b9125,
+    type: 3}
+  whitePrefab4: {fileID: 6943962550686905126, guid: 90193c441b9865b41b1c521106e9e59a,
+    type: 3}
   textJSON: {fileID: 4900000, guid: a27b77c836fc72141be10d716348d248, type: 3}
   myTrack:
     name: 
