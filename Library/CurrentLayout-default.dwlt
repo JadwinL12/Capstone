@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 540
+  controlID: 107
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 405, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 541
+  controlID: 108
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 405, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 542
+  controlID: 109
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1334, y: 750}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -375,10 +375,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -667
-    m_HBaseRangeMax: 667
-    m_VBaseRangeMin: -375
-    m_VBaseRangeMax: 375
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -398,7 +398,7 @@ MonoBehaviour:
       y: 21
       width: 649
       height: 529
-    m_Scale: {x: 0.48650676, y: 0.48650673}
+    m_Scale: {x: 0.33802083, y: 0.33802083}
     m_Translation: {x: 324.5, y: 264.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -406,12 +406,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -667
-      y: -543.6718
-      width: 1334
-      height: 1087.3436
+      x: -960
+      y: -782.49615
+      width: 1920
+      height: 1564.9923
     m_MinimalGUI: 1
-  m_defaultScale: 0.48650676
+  m_defaultScale: 0.33802083
   m_LastWindowPixelSize: {x: 649, y: 550}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -447,9 +447,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0a4b0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 60cdffff38fbffff
+      m_ExpandedIDs: bcf7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.541138, y: -3.6794844, z: 65.59551}
+    m_Target: {x: 0.59999996, y: 0.10000001, z: -17.33987}
     speed: 2
     m_Value: {x: 16.541138, y: -3.6794844, z: 65.59551}
   m_RenderMode: 0
@@ -559,11 +559,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2885991, y: 0.44513822, z: -0.15411863, w: 0.833554}
+    m_Target: {x: -0.17489758, y: -0.009751803, z: 0.001730947, w: -0.98454016}
     speed: 2
     m_Value: {x: 0.2885991, y: 0.4451382, z: -0.15411863, w: 0.83355397}
   m_Size:
-    m_Target: 15.268269
+    m_Target: 19.774223
     speed: 2
     m_Value: 15.268269
   m_Ortho:
@@ -637,14 +637,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\467\Capstone_New
+  m_LastProjectPath: C:\Users\calvi\OneDrive\Desktop\PROJECT\master\Capstone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 803e0000
-    m_LastClickedID: 16000
-    m_ExpandedIDs: 00000000803e0000823e0000843e0000863e0000883e000000ca9a3b
+    m_SelectedIDs: 8e450000
+    m_LastClickedID: 17806
+    m_ExpandedIDs: 000000008e4500009045000092450000944500009645000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,7 +672,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000803e0000823e0000843e0000863e0000883e0000
+    m_ExpandedIDs: 000000008e45000090450000924500009445000096450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

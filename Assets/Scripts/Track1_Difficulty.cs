@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Track1_Difficulty : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void selectEasy()
     {
         SceneManager.LoadScene("Track1_Easy");
@@ -13,7 +12,7 @@ public class Track1_Difficulty : MonoBehaviour
 
     public void selectNormal()
     {
-        SceneManager.LoadScene("Track1_Medium");
+        SceneManager.LoadScene("Track1_Normal");
     }
 
     public void selectHard()
