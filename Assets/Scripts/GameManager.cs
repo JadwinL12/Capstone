@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
             comboBarUI.SetActive(false);
             scoreBarUI.SetActive(false);
             gameBoardUI.SetActive(false);
+            pauseMenuUI.SetActive(false);
 
             resultsMenuUI.SetActive(true);
         }
