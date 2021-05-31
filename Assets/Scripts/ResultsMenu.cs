@@ -13,6 +13,7 @@ public class ResultsMenu : MonoBehaviour
 
     public Text scoreText;
     public Text comboText;
+    public Text perfText;
     public Text goodText;
     public Text missText;
 
@@ -21,6 +22,7 @@ public class ResultsMenu : MonoBehaviour
     public Combo combo;
 
     public float highestCombo;
+    public float perfHits;
     public float goodHits;
     public float missHits;
 
@@ -51,6 +53,7 @@ public class ResultsMenu : MonoBehaviour
 
         scoreText.text = score.totalScore.ToString();
         comboText.text = combo.highestCombo.ToString();
+        perfText.text = perfHits.ToString();
         goodText.text = goodHits.ToString();
         missText.text = missHits.ToString();
     }
