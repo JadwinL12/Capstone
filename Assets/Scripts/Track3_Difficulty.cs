@@ -12,7 +12,7 @@ public class Track3_Difficulty : MonoBehaviour
 
     public void selectNormal()
     {
-        SceneManager.LoadScene("Track3_Medium");
+        SceneManager.LoadScene("Track3_Normal");
     }
 
     public void selectHard()

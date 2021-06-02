@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         HealthBar healthValue = healthBar.GetComponent<HealthBar>();
         ResultsMenu results = resultsMenuUI.GetComponent<ResultsMenu>();
 
-        results.goodHits += 1;
+        results.perfHits += 1;
         comboText.hitCount += 1;
         scoreText.totalHit += 1;
         healthValue.addHealth();
@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
             comboBarUI.SetActive(false);
             scoreBarUI.SetActive(false);
             gameBoardUI.SetActive(false);
+            pauseMenuUI.SetActive(false);
 
             resultsMenuUI.SetActive(true);
         }
